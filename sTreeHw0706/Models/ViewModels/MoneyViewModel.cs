@@ -7,6 +7,7 @@ namespace sTreeHw0706.Models.ViewModels
 {
     public class MoneyViewModel
     {
+        public int No { get; set; }
         public string Type { get; set; }
         public DateTime? Datetime { get; set; }
         public int Amount { get; set; }

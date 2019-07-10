@@ -10,19 +10,16 @@
                         <th>日期</th>
                         <th>金額</th>
                     </tr>
-                    @{int i = 0;}
+                   
                     @foreach (var details in Model)
                     {
-                        i++;
                     <tr>
-                        <td>@i</td>
+                        <td>@details.No</td>
                         <td>
                             @details.Type
                         </td>
                         <td>
-                            @*@Html.DisplayFor(model => details.Datetime)*@
                             @(details.Datetime.HasValue ? details.Datetime.Value.ToString("yyyy/MM/dd") : "")
-
                         </td>
                         <td>
                             @details.Amount.ToString("N0")
