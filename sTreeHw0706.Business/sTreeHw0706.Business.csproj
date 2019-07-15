@@ -44,5 +44,15 @@
     <Compile Include="Services\AccountService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sTreeHw0706.EFRepository\sTreeHw0706.EFRepository.csproj">
+      <Project>{0cf51c49-3817-4d04-8e17-e5a80812ca2c}</Project>
+      <Name>sTreeHw0706.EFRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sTreeHw0706.Model\sTreeHw0706.Model.csproj">
+      <Project>{fbd6fd96-480b-482a-ad7e-d71c2dfc637a}</Project>
+      <Name>sTreeHw0706.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

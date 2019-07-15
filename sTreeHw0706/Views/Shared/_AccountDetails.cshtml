@@ -21,7 +21,7 @@
                             @details.Type
                         </td>
                         <td>
-                            @(details.Datetime.HasValue ? details.Datetime.Value.ToString("yyyy/MM/dd") : "")
+                            @(details.Datetime.Value.ToString("yyyy-MM-dd"))
                         </td>
                         <td>
                             @details.Amount.ToString("N0")

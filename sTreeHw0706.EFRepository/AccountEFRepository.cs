@@ -14,7 +14,6 @@ namespace sTreeHw0706.EFRepository
             {
                 return context.AccountBook.ToList();
             }
-
         }
 
 
