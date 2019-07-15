@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sTreeHw0706.EFRepository", "sTreeHw0706.EFRepository\sTreeHw0706.EFRepository.csproj", "{0CF51C49-3817-4D04-8E17-E5A80812CA2C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{DD023481-90BE-4B9A-989E-6E1DE51B813A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sTreeHw0706.Model", "sTreeHw0706.Model\sTreeHw0706.Model.csproj", "{FBD6FD96-480B-482A-AD7E-D71C2DFC637A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,17 @@ Global
 		{0CF51C49-3817-4D04-8E17-E5A80812CA2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CF51C49-3817-4D04-8E17-E5A80812CA2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CF51C49-3817-4D04-8E17-E5A80812CA2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBD6FD96-480B-482A-AD7E-D71C2DFC637A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD6FD96-480B-482A-AD7E-D71C2DFC637A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD6FD96-480B-482A-AD7E-D71C2DFC637A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD6FD96-480B-482A-AD7E-D71C2DFC637A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0CF51C49-3817-4D04-8E17-E5A80812CA2C} = {76805455-1B76-4D5A-AF92-95FE35DB135B}
+		{FBD6FD96-480B-482A-AD7E-D71C2DFC637A} = {DD023481-90BE-4B9A-989E-6E1DE51B813A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3EC1967D-6674-426D-BBBE-E03FAADD6DBB}
