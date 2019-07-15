@@ -15,16 +15,20 @@
                     {
                     <tr>
                         <td>
-                            @details.No
+                            @Html.DisplayFor(m=>details.No)
                         </td>
                         <td>
-                            @details.Type
+                            @Html.DisplayFor(m => details.Type)
                         </td>
                         <td>
+                            @*[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]*@
                             @(details.Datetime.Value.ToString("yyyy-MM-dd"))
+                            @*@Html.DisplayFor(m => details.Datetime, "{0:yyyy-MM-dd}")*@
+                            @*@Html.DisplayFor(m => details.Datetime, "{0:yyyy-MM-dd}", new { @class = "dateformat"})*@
                         </td>
                         <td>
                             @details.Amount.ToString("N0")
+                            @*@Html.DisplayFor(m => details.Amount.ToString("N0"))*@
                         </td>
                     </tr>
 

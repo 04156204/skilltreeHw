@@ -10,6 +10,10 @@ namespace sTreeHw0706.Business
 {
     public class AccountService
     {
+        /// <summary>
+        /// 從資料庫拿出資料，並轉成ViewModel所需格式
+        /// </summary>
+        /// <returns></returns>
         public List<MoneyViewModel> AccountBookTurn()
         {
             List<MoneyViewModel> accoutDetails = new List<MoneyViewModel>();
@@ -22,6 +26,7 @@ namespace sTreeHw0706.Business
                 {
                     No = i,
                     Type = details.Categoryyy % 2 == 0 ? "收入" : "支出",
+                    //其實不知道 demo提供的Categoryyy哪個數字代表什麼
                     Datetime = details.Dateee,
                     Amount = details.Amounttt
                 };
