@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using sTreeHw0706.EFRepository;
 
 namespace sTreeHw0706.Controllers
 {

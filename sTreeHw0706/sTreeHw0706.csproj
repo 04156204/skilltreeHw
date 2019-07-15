@@ -195,6 +195,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\sTreeHw0706.Business\sTreeHw0706.Business.csproj">
+      <Project>{44cf0785-b557-4e27-874e-3f9cf852c02b}</Project>
+      <Name>sTreeHw0706.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\sTreeHw0706.EFRepository\sTreeHw0706.EFRepository.csproj">
       <Project>{0cf51c49-3817-4d04-8e17-e5a80812ca2c}</Project>
       <Name>sTreeHw0706.EFRepository</Name>
