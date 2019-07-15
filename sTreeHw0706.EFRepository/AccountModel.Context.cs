@@ -13,10 +13,10 @@ namespace sTreeHw0706.EFRepository
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SkillTreeAccountEntities : DbContext
+    public partial class SkillTreeHomeworkEntities : DbContext
     {
-        public SkillTreeAccountEntities()
-            : base("name=SkillTreeAccountEntities")
+        public SkillTreeHomeworkEntities()
+            : base("name=SkillTreeHomeworkEntities")
         {
         }
     

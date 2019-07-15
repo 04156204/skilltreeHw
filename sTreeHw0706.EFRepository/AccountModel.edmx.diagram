@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="59f8aae7cc9741dda9cb75fd36b26788" Name="Diagram1">
+      <Diagram DiagramId="def13b28e93b4f02b04ae2b92107174a" Name="Diagram1">
         <EntityTypeShape EntityType="SkillTreeHomeworkModel.AccountBook" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
