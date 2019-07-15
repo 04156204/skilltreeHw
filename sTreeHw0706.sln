@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sTreeHw0706", "sTreeHw0706\sTreeHw0706.csproj", "{BB4977CB-74FE-43A6-92CF-3137B38DB626}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{76805455-1B76-4D5A-AF92-95FE35DB135B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sTreeHw0706.EFRepository", "sTreeHw0706.EFRepository\sTreeHw0706.EFRepository.csproj", "{0CF51C49-3817-4D04-8E17-E5A80812CA2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{BB4977CB-74FE-43A6-92CF-3137B38DB626}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB4977CB-74FE-43A6-92CF-3137B38DB626}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB4977CB-74FE-43A6-92CF-3137B38DB626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF51C49-3817-4D04-8E17-E5A80812CA2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF51C49-3817-4D04-8E17-E5A80812CA2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF51C49-3817-4D04-8E17-E5A80812CA2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF51C49-3817-4D04-8E17-E5A80812CA2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0CF51C49-3817-4D04-8E17-E5A80812CA2C} = {76805455-1B76-4D5A-AF92-95FE35DB135B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3EC1967D-6674-426D-BBBE-E03FAADD6DBB}
