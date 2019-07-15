@@ -12,3 +12,10 @@
 >金額需三位數一個逗點。<br>
 >不使用LocalDB。<br>
 
+第二週作業題目如下<br>
+
+>1.記帳本資料改為真實DB 可使用EF ADO.NET<br>
+>2.請使用HomeWorkDB內的資料 <br>
+>3.不可改變第一天設計的ViewModel <br>
+>4.建議練習：實做Service層 <br>
+>5.額外挑戰：UnitOfWork Repository <br>
