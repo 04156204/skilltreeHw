@@ -10,6 +10,14 @@ namespace sTreeHw0706.Business
 {
     public class AccountService
     {
+        private AccountEFRepository _accRepo;
+        public AccountService()
+        {
+            _accRepo = new AccountEFRepository();
+
+        }
+
+
         /// <summary>
         /// 從資料庫拿出資料，並轉成ViewModel所需格式
         /// </summary>
@@ -17,8 +25,8 @@ namespace sTreeHw0706.Business
         public List<MoneyViewModel> AccountBookTurn()
         {
             List<MoneyViewModel> accoutDetails = new List<MoneyViewModel>();
-            AccountEFRepository repo = new AccountEFRepository();
-            List<AccountBook> accountBooks = repo.GetAll();
+            //AccountEFRepository repo = new AccountEFRepository();
+            List<AccountBook> accountBooks = _accRepo.GetAll();
             int i = 1;
             foreach (var details in accountBooks)
             {
@@ -34,6 +42,19 @@ namespace sTreeHw0706.Business
                 i++;
             }
             return accoutDetails;
+        }
+
+        public void add(MoneyViewModel anAccount)
+        {
+            AccountBook accountBook = new AccountBook();
+            // 產流水號 accountBook.Id = anAccount.No;
+            //數字轉文字accountBook.Categoryyy = anAccount.Type;
+            //accountBook.Dateee = anAccount.Datetime;
+            accountBook.Amounttt = anAccount.Amount;
+            accountBook.Remarkkk = anAccount.Note;
+
+            var repo = _accRepo.AddAccount(accountBook);
+            
         }
 
 

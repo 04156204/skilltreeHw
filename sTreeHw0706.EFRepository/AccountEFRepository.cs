@@ -20,7 +20,16 @@ namespace sTreeHw0706.EFRepository
             }
         }
 
-
+        public int AddAccount(AccountBook anAccount)
+        {
+            int res = 0;
+            using (SkillTreeHomeworkEntities context = new SkillTreeHomeworkEntities())
+            {
+                context.AccountBook.Add(anAccount);
+                res = context.SaveChanges();
+            }
+            return res;
+        }
 
 
 

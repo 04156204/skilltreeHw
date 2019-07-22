@@ -124,5 +124,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sTreeHw0706.Model\sTreeHw0706.Model.csproj">
+      <Project>{fbd6fd96-480b-482a-ad7e-d71c2dfc637a}</Project>
+      <Name>sTreeHw0706.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,6 +18,15 @@ namespace sTreeHw0706.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Input(MoneyViewModel anAccount) {
+
+            return View();
+        }
+
+
+
+
         [ChildActionOnly]
         public ActionResult _AccountInput()
         {
