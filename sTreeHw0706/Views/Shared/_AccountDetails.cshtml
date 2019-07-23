@@ -8,14 +8,14 @@
                         <th>流水號</th>
                         <th>類別</th>
                         <th>日期</th>
-                        <th>金額</th>
+                        <th>金額</th>                        
                     </tr>
                    
                     @foreach (var details in Model)
                     {
                     <tr>
                         <td>
-                            @Html.DisplayFor(m=>details.No)
+                            @Html.DisplayFor(m => details.No)
                         </td>
                         <td>
                             @Html.DisplayFor(m => details.Type)
@@ -30,6 +30,9 @@
                             @details.Amount.ToString("N0")
                             @*@Html.DisplayFor(m => details.Amount.ToString("N0"))*@
                         </td>
+                        @*<td>
+                            @Html.DisplayFor(m => details.Note)
+                        </td>*@
                     </tr>
 
                     }

@@ -36,7 +36,8 @@ namespace sTreeHw0706.Business
                     Type = details.Categoryyy % 2 == 0 ? "收入" : "支出",
                     //其實不知道 demo提供的Categoryyy哪個數字代表什麼
                     Datetime = details.Dateee,
-                    Amount = details.Amounttt
+                    Amount = details.Amounttt,
+                    Note =details.Remarkkk
                 };
                 accoutDetails.Add(aDetail);
                 i++;
@@ -44,18 +45,22 @@ namespace sTreeHw0706.Business
             return accoutDetails;
         }
 
-        public void add(MoneyViewModel anAccount)
+        public int addAcc(MoneyViewModel anAccount)
         {
             AccountBook accountBook = new AccountBook();
-            // 產流水號 accountBook.Id = anAccount.No;
-            //數字轉文字accountBook.Categoryyy = anAccount.Type;
-            //accountBook.Dateee = anAccount.Datetime;
+            // 產流水號 
+            accountBook.Id = Guid.NewGuid();
+            accountBook.Categoryyy = int.Parse(anAccount.Type);
+            accountBook.Dateee = anAccount.Datetime ?? DateTime.Now;
             accountBook.Amounttt = anAccount.Amount;
             accountBook.Remarkkk = anAccount.Note;
 
             var repo = _accRepo.AddAccount(accountBook);
-            
+            return repo ;          
         }
+
+
+
 
 
     }
