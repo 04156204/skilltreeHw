@@ -34,9 +34,12 @@ namespace sTreeHw0706.Controllers
 
         [HttpPost]
         public ActionResult _InputAccount(MoneyViewModel anAccount) {
-            var res = _accService.addAcc(anAccount);
-
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                var res = _accService.addAcc(anAccount);
+                return RedirectToAction("Index");
+            }
+            return View(anAccount);
             //res == 0 ?  View() : new JsonResult { }  ;
         }
 
