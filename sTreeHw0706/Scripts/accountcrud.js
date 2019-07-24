@@ -1,7 +1,6 @@
 ﻿$(function () {
 
     $(document).on("click", '#accinput',function (e) {
-        alert("click");
         $.ajax({
             url: '/Account/_AccountInput',
             method: 'POST',
@@ -11,6 +10,7 @@
                     alert(reJson.Message);
                 }
                 else {
+                    alert("新增成功");
                     location.reload();
                     
                 }
