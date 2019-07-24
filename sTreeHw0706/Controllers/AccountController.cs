@@ -20,9 +20,9 @@ namespace sTreeHw0706.Controllers
         }
 
         // GET: Account
-        public ActionResult Index()
+        public ActionResult Index(MoneyViewModel anAccount)
         {
-            return View();
+            return View(anAccount);
         }
 
         [ChildActionOnly]
@@ -33,17 +33,50 @@ namespace sTreeHw0706.Controllers
         }
 
         [HttpPost]
-        public ActionResult _InputAccount(MoneyViewModel anAccount) {
-            if (ModelState.IsValid)
+        public ActionResult _AccountInput(MoneyViewModel anAccount)
+        {
+            var res = new
             {
-                var res = _accService.addAcc(anAccount);
-                return RedirectToAction("Index");
+                Code = "",
+                Message = "",
+            };
+            if (!ModelState.IsValid)
+            {
+                var errorMessage = ModelState.
+                                    Values.
+                                    SelectMany(v => v.Errors)
+                                    .Select(e => e.ErrorMessage);
+                res = new
+                {
+                    Code = "0001", 
+                    Message = string.Join("，", errorMessage), 
+                };
+
+                return Json(res);
             }
-            return View(anAccount);
-            //res == 0 ?  View() : new JsonResult { }  ;
+            var retu = _accService.addAcc(anAccount);
+
+            if (retu != 0)
+            {
+                res= new
+                {
+                    Code = "0000", 
+                    Message = "",
+                };
+                return Json(res);
+            }
+            else {
+                res = new
+                {
+                    Code = "0001",
+                    Message = "後台新增失敗",
+                };
+                return Json(res);
+            }
+
         }
 
-        
+
 
         [ChildActionOnly]
         [HttpGet]
@@ -53,7 +86,7 @@ namespace sTreeHw0706.Controllers
             return PartialView(accountBookDetails);
         }
 
- 
+
 
     }
 }

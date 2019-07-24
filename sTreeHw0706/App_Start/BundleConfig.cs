@@ -25,6 +25,10 @@ namespace sTreeHw0706
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/account").Include(
+                      "~/Scripts/accountcrud.js"));
+
         }
     }
 }

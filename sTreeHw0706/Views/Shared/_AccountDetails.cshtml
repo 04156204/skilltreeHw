@@ -8,12 +8,14 @@
                         <th>流水號</th>
                         <th>類別</th>
                         <th>日期</th>
-                        <th>金額</th>                        
+                        <th>金額</th>
                     </tr>
-                   
+
                     @foreach (var details in Model)
                     {
-                    <tr>
+
+                    if(details.Type == "收入"){
+                    <tr style="background-color:lightcyan">
                         <td>
                             @Html.DisplayFor(m => details.No)
                         </td>
@@ -31,10 +33,34 @@
                             @*@Html.DisplayFor(m => details.Amount.ToString("N0"))*@
                         </td>
                         @*<td>
-                            @Html.DisplayFor(m => details.Note)
-                        </td>*@
+                                @Html.DisplayFor(m => details.Note)
+                            </td>*@
                     </tr>
 
+
+                    }
+                    else{
+                    <tr style="background-color:lavenderblush">
+                        <td>
+                            @Html.DisplayFor(m => details.No)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => details.Type)
+                        </td>
+                        <td>
+                            @*[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]*@
+                            @(details.Datetime.Value.ToString("yyyy-MM-dd"))
+                            @*@Html.DisplayFor(m => details.Datetime, "{0:yyyy-MM-dd}")*@
+                            @*@Html.DisplayFor(m => details.Datetime, "{0:yyyy-MM-dd}", new { @class = "dateformat"})*@
+                        </td>
+                        <td>
+                            @details.Amount.ToString("N0")
+                            @*@Html.DisplayFor(m => details.Amount.ToString("N0"))*@
+                        </td>
+                        @*<td>
+                                @Html.DisplayFor(m => details.Note)
+                            </td>*@
+                    </tr>}
                     }
                 </table>
             </div>
