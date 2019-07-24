@@ -16,6 +16,7 @@ namespace sTreeHw0706.Models.ViewModels
         [Required(ErrorMessage = "金額──")]
         public int Amount { get; set; }
         [Required(ErrorMessage = "備註")]
+        [StringLength(200)]
         public string Note { get; set; }
     }
 }
