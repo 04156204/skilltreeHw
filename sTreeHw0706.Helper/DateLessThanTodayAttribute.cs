@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
-namespace sTreeHw0706.Model.Attributes
+namespace sTreeHw0706.Helper
 {
-    public class DateLessThanTodayAttribute : ValidationAttribute
+    public class DateLessThanTodayAttribute :ValidationAttribute
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {

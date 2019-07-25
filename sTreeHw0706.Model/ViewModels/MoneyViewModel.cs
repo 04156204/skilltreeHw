@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
-using sTreeHw0706.Model.Attributes;
+using sTreeHw0706.Helper;
 
 namespace sTreeHw0706.Models.ViewModels
 {
