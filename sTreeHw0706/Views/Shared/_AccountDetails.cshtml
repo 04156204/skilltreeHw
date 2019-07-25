@@ -13,57 +13,46 @@
 
                     @foreach (var details in Model)
                     {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m => details.No)
+                            </td>
+                            <td>
+                                @DisplayTypeColor(details.Type)
+                            </td>
+                            <td>
+                                @(details.Datetime.Value.ToString("yyyy-MM-dd"))
+                                @*@Html.DisplayFor(m => details.Datetime, "{0:yyyy-MM-dd}")*@
+                                @*請問為何使用DisplayFor就無法順利轉成yyyy-MM-dd格式？(沒有看到錯誤訊息)該如何撰寫才正確？*@
+                                @*@Html.DisplayFor(m => details.Datetime, "{0:yyyy-MM-dd}", new { @class = "dateformat"})*@
+                            </td>
+                            <td>
+                                @details.Amount.ToString("N0")
+                                @*@Html.DisplayFor(m => details.Amount.ToString("N0"))*@
+                                @*↑範本只能配合欄位存取、屬性存取、單一維度陣列索引或單一參數自訂索引子運算式使用。*@
+                            </td>
+                            @*<td>
+                                    @Html.DisplayFor(m => details.Note)
+                                </td>*@
+                        </tr>
 
-                    if(details.Type == "收入"){
-                    <tr style="background-color:lightcyan">
-                        <td>
-                            @Html.DisplayFor(m => details.No)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => details.Type)
-                        </td>
-                        <td>
-                            @*[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]*@
-                            @(details.Datetime.Value.ToString("yyyy-MM-dd"))
-                            @*@Html.DisplayFor(m => details.Datetime, "{0:yyyy-MM-dd}")*@
-                            @*@Html.DisplayFor(m => details.Datetime, "{0:yyyy-MM-dd}", new { @class = "dateformat"})*@
-                        </td>
-                        <td>
-                            @details.Amount.ToString("N0")
-                            @*@Html.DisplayFor(m => details.Amount.ToString("N0"))*@
-                        </td>
-                        @*<td>
-                                @Html.DisplayFor(m => details.Note)
-                            </td>*@
-                    </tr>
-
-
-                    }
-                    else{
-                    <tr style="background-color:lavenderblush">
-                        <td>
-                            @Html.DisplayFor(m => details.No)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => details.Type)
-                        </td>
-                        <td>
-                            @*[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]*@
-                            @(details.Datetime.Value.ToString("yyyy-MM-dd"))
-                            @*@Html.DisplayFor(m => details.Datetime, "{0:yyyy-MM-dd}")*@
-                            @*@Html.DisplayFor(m => details.Datetime, "{0:yyyy-MM-dd}", new { @class = "dateformat"})*@
-                        </td>
-                        <td>
-                            @details.Amount.ToString("N0")
-                            @*@Html.DisplayFor(m => details.Amount.ToString("N0"))*@
-                        </td>
-                        @*<td>
-                                @Html.DisplayFor(m => details.Note)
-                            </td>*@
-                    </tr>}
                     }
                 </table>
             </div>
         </div>
     </dl>
 </div>
+
+
+@helper DisplayTypeColor(string type)
+{
+    if (type == "收入")
+    {
+        <span style="color:blue">@type</span>
+    }
+    else
+    {
+        <span class="text-danger" style="color:red">@type</span>
+    }
+
+}
