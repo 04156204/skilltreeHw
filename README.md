@@ -27,5 +27,9 @@
 >進階：以Ajax傳遞資料<br>
 
 
-待提問<br>
->1. IEIQ觀念<br>
+待7/27提問<br>
+>1. IEnumerableIQueryable觀念<br>
+>[[Entity Framework][LINQ] IEnumerable與IQueryable差異比較](https://dotblogs.com.tw/wasichris/archive/2015/03/04/150633.aspx)<br>
+>[關於IQueryable<T>特性的小實驗](https://blog.darkthread.net/blog/iqueryable-experiment/)<br>
+>IQ 比較不浪費，那IE有優勢嗎<br>
+>2. 請解說三種DropdownList<br>
