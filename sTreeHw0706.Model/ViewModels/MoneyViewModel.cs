@@ -6,7 +6,11 @@ using System.ComponentModel.DataAnnotations;
 using sTreeHw0706.Helper;
 
 namespace sTreeHw0706.Models.ViewModels
-{
+{public enum TypeEnum
+    {
+        收入,
+        支出
+    }
     public class MoneyViewModel
     {
         public int No { get; set; }

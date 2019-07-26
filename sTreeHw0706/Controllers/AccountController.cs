@@ -22,6 +22,7 @@ namespace sTreeHw0706.Controllers
         // GET: Account
         public ActionResult Index(MoneyViewModel anAccount)
         {
+            GetBaseDropdownListModel();
             return View(anAccount);
         }
 
@@ -31,6 +32,26 @@ namespace sTreeHw0706.Controllers
         {
             return View();
         }
+
+
+        private void GetBaseDropdownListModel()
+        {
+            var items = new List<SelectListItem>();
+
+            items.Add(new SelectListItem()
+            {
+                Text = "收入",
+                Value = "0"
+            });
+            items.Add(new SelectListItem()
+            {
+                Text = "支出",
+                Value = "1"
+            });
+
+            Session["TypeList"] = items;
+        }
+
 
         [HttpPost]
         public ActionResult _AccountInput(MoneyViewModel anAccount)
@@ -48,8 +69,8 @@ namespace sTreeHw0706.Controllers
                                     .Select(e => e.ErrorMessage);
                 res = new
                 {
-                    Code = "0001", 
-                    Message = string.Join("，", errorMessage), 
+                    Code = "0001",
+                    Message = string.Join("，", errorMessage),
                 };
 
                 return Json(res);
@@ -58,14 +79,15 @@ namespace sTreeHw0706.Controllers
 
             if (retu != 0)
             {
-                res= new
+                res = new
                 {
-                    Code = "0000", 
+                    Code = "0000",
                     Message = "",
                 };
                 return Json(res);
             }
-            else {
+            else
+            {
                 res = new
                 {
                     Code = "0001",
