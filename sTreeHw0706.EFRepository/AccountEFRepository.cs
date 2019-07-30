@@ -8,25 +8,30 @@ namespace sTreeHw0706.EFRepository
 {
     public class AccountEFRepository
     {
+        private SkillTreeHomeworkEntities _context;
+        public AccountEFRepository() {
+            _context = new SkillTreeHomeworkEntities();
+        }
+
         /// <summary>
         /// 撈資料庫
         /// </summary>
         /// <returns></returns>
         public List<AccountBook> GetAll()
         {
-            using (SkillTreeHomeworkEntities context = new SkillTreeHomeworkEntities())
+            using (_context)
             {
-                return context.AccountBook.ToList();
+                return _context.AccountBook.ToList();
             }
         }
 
         public int AddAccount(AccountBook anAccount)
         {
             int res = 0;
-            using (SkillTreeHomeworkEntities context = new SkillTreeHomeworkEntities())
+            using (_context)
             {
-                context.AccountBook.Add(anAccount);
-                res = context.SaveChanges();
+                _context.AccountBook.Add(anAccount);
+                res = _context.SaveChanges();
             }
             return res;
         }
